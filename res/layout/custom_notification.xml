@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/toast_layout_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    
+    android:orientation="vertical" >
+    
+    <!-- title -->
+    <TextView
+        android:id="@+id/ArriveText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/user_arrive_notification_text_view_title_text"
+        
+        android:textSize="29sp" 
+       
+        />
+    
+    <!-- destination name -->
+    <TextView
+        android:id="@+id/DestinationName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ArriveText"
+        android:text="@string/user_arrive_notification_Destination_title"
+        android:textSize="29sp" 
+        />
+    
+    <TextView
+        android:id="@+id/DestinationText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="29sp" 
+        android:layout_below="@id/DestinationName"
+        />
+    
+    <!-- longitude -->
+    <TextView
+        android:id="@+id/latitdue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/user_arrive_notification_Latitude_title"
+        android:layout_below="@id/DestinationText"
+        android:textSize="29sp" 
+        />
+    
+    <TextView
+        android:id="@+id/latitdueValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/latitdue"
+        android:textSize="29sp" 
+        />
+    
+    <!-- latitude -->
+    <TextView
+        android:id="@+id/longtitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/user_arrive_notification_Longtitude_title"
+        android:layout_below="@id/latitdueValue"
+        android:textSize="29sp" 
+        />
+    
+    <TextView
+        android:id="@+id/longtitudeValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/longtitude"
+        android:textSize="29sp" 
+        />
+</RelativeLayout>

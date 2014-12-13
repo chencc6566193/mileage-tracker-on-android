@@ -1,0 +1,107 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.mapapps.MainActivity" >
+
+    <!-- <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_world" /> -->
+    
+    <!-- TextView for tooglebutton, background color: gray-->
+
+    <TextView
+        android:id="@+id/text_switch_On_Off"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        
+        android:layout_alignBottom="@+id/ToggleButton_switch_On_Off"
+        android:layout_alignParentLeft="true"
+        android:background="#A9A9A9"
+        android:text="@string/text_switch_On_Off"
+        android:textSize="29sp" />
+    
+    <!-- textview used to inform user that he/she has arrive destination -->
+    <!-- <TextView 
+        android:id="@+id/text_arrival_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/text_switch_On_Off"
+        android:layout_marginLeft="3dp"
+        /> -->
+    <!-- tooglebutton to switch between On And Off mode -->
+    <EditText
+        android:id="@+id/text_user_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/text_switch_On_Off"
+        android:layout_alignBottom="@id/ToggleButton_switch_On_Off"
+        android:hint="Input Id"/>
+    
+    <ToggleButton
+        android:id="@+id/ToggleButton_switch_On_Off"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOn="@string/button_switch_On"
+        android:textOff="@string/button_switch_Off"
+        android:layout_alignParentRight="true"
+        android:checked="false" />
+        <!-- android:layout_toRightOf="@id/text_switch_On_Off" -->
+    
+    <!-- add a autocomplete textview, so that we can provide address hint to user -->
+    <EditText 
+        android:id="@+id/UserInputText_destination"
+        android:layout_below="@id/ToggleButton_switch_On_Off"
+        android:layout_alignParentLeft="true"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:hint="@string/user_input_text_view_hint"
+        
+        />
+    
+    <!-- a button to submit the destination -->
+    <!-- currently we will not realize the autocomplete textview -->
+    <Button
+        android:id="@+id/Button_confirm_Address"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/ToggleButton_switch_On_Off"
+        
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/button_submit_address"
+        />
+    
+    <!-- put a progress Bar here, it is a rotating circle indicating the progressing status -->
+    <ProgressBar
+        android:id="@+id/address_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/Button_confirm_Address"
+        android:indeterminate="true"
+        android:visibility="gone"
+        />
+    
+    <!-- this is the framework used to show map -->
+	<fragment
+        android:id="@+id/map"
+        android:layout_below="@id/address_progress"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:name="com.google.android.gms.maps.SupportMapFragment"/>
+
+</RelativeLayout>
+
+<!-- <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+          android:id="@+id/map"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:name="com.google.android.gms.maps.MapFragment"/> -->

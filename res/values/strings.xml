@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MapApps</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    
+    <!-- string value for Activity_Main layout -->
+	<string name="text_switch_On_Off">At Work ?</string>
+	<string name="button_switch_Off">OFF</string>
+	<string name="button_switch_On">ON</string>
+	
+	<string name="user_input_text_view_hint">Search Destination</string>
+    <string name="button_submit_address">Confirm</string>
+    <string name="button_switch_Off_State">button_switch_Off_State</string>
+    
+    <string name="user_arrive_notification_text_view_title_text">You have arrive Destinition</string>
+    <string name="user_arrive_notification_Destination_title">Destination Name:</string>
+    
+    <string name="user_arrive_notification_Latitude_title">Latitude:</string>
+    <string name="user_arrive_notification_Longtitude_title">Longtitude:</string>
+</resources>
